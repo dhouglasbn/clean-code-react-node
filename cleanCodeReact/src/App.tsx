@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header onCreateNewTodo={() => {}} />
 
       <main>
         <h2>Advantages</h2>
