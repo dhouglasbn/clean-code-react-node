@@ -24,6 +24,10 @@ function App() {
   // function handleCreateNewTodo() {
   // }
 
+  // This allows a cleaner jsx without logic on there
+  // Do not put JS operations in JSX
+  const isTodoListEmpty = todos.length === 0
+
   return (
     <div>
       <Header onCreateNewTodo={() => {}} />
@@ -63,6 +67,11 @@ function App() {
         <ul>
           {todos.map(todo => <li key={todo}>{todo}</li>)}
         </ul>
+
+        {isTodoListEmpty && (
+          <p>Nenhum todo cadastrado.</p>
+        )}
+
       </main>
 
       <Footer />
