@@ -1,4 +1,6 @@
 interface HeaderProps {
+  // Quando eu crio um componente e ele precisa receber
+  // uma função que é disparada de um evento do usuário usamos 'on'
   onCreateNewTodo: () => void
 }
 

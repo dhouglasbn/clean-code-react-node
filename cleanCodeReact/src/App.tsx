@@ -11,9 +11,17 @@ import { Footer } from './components/Footer'
 // Na hora de separar olhamos mais para o js antes de olhar para o jsx
 // Nosso objetivo não é diminuir a leitura, mas deixar o código mais legível
 
+// Aula 3 -> Funções e event listeners
+
+// handle, on
+
 function App() {
   const [todos, setTodo] = useState<string[]>([])
 
+  // handle para criar funções no componente a partir de eventos do usuário
+  function handleCreateNewTodo() {
+
+  }
 
   return (
     <div>
