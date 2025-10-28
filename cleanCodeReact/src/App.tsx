@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import { Input } from './components/Input.old'
+import * as GoodInput from './components/Input'
 
 /** Quando separar o componente em componentes menores
  * 
@@ -19,13 +21,29 @@ function App() {
   const [todos, setTodo] = useState<string[]>([])
 
   // handle para criar funções no componente a partir de eventos do usuário
-  function handleCreateNewTodo() {
-
-  }
+  // function handleCreateNewTodo() {
+  // }
 
   return (
     <div>
       <Header onCreateNewTodo={() => {}} />
+
+      {/* Jeito ruim de usar o input com configurações */}
+      {/* <Input
+        label='Nome'
+        errorMessage='Digite seu nome corretamente!'
+        icon={<div />}
+      /> */}
+
+      {/* Jeito bom de usar o input com composição */}
+      <GoodInput.Root>
+        <GoodInput.Label htmlFor='name' id="name" />
+        <GoodInput.FormField />
+        <GoodInput.Icon>
+          <span />
+        </GoodInput.Icon>
+        <GoodInput.ErrorMessage message='Digite seu nome corretamente!' />
+      </GoodInput.Root>
 
       <main>
         <h2>Advantages</h2>
